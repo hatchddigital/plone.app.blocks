@@ -75,28 +75,28 @@
     
     <!-- 8000: Turn the response into an lxml tree for further manipulation -->
     <adapter
-        for="* .interfaces.IBlocksLayer"
+        for="plone.tiles.interfaces.IBasicTile .interfaces.IBlocksLayer"
         name="plone.app.blocks.parsexml"
         factory=".transform.ParseXML"
         />
 
     <!-- 8100: Locate the site layout and merge panels -->
     <adapter
-        for="* .interfaces.IBlocksLayer"
+        for="plone.tiles.interfaces.IBasicTile .interfaces.IBlocksLayer"
         name="plone.app.blocks.mergepanels"
         factory=".transform.MergePanels"
         />
     
     <!-- 8500: Finds and includes tiles in the output -->
     <adapter
-       for="* .interfaces.IBlocksLayer"
+       for="plone.tiles.interfaces.IBasicTile .interfaces.IBlocksLayer"
        name="plone.app.blocks.tiles"
        factory=".transform.IncludeTiles"
        />
     
     <!-- 8900: ESI post-processing if required -->
     <adapter
-       for="* .interfaces.IBlocksLayer"
+       for="plone.tiles.interfaces.IBasicTile .interfaces.IBlocksLayer"
        name="plone.app.blocks.esirender"
        factory=".transform.ESIRender"
        />
