@@ -44,7 +44,7 @@ setup(
         'zope.component',
         'zope.publisher',
         'zope.schema',
-        'zope.site',
+        # 'zope.site',
         'zope.i18nmessageid',
         'repoze.xmliter',
         'plone.tiles',
