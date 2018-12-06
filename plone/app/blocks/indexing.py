@@ -67,16 +67,16 @@ def LayoutSearchableText(obj):
     try:
         if behavior_data.content:
             dom = fromstring(behavior_data.content)
-            for el in dom.xpath('//text()'):
-                build_layout_indexed_text(obj, text, tostring(el))
+            for el_text in dom.xpath('//text()'):
+                build_layout_indexed_text(obj, text, el_text)
     except AttributeError:
         pass
 
     try:
         if behavior_data.customLayout:
             dom = fromstring(behavior_data.customLayout)
-            for el in dom.xpath('//text()'):
-                build_layout_indexed_text(obj, text, tostring(el))
+            for el_text in dom.xpath('//text()'):
+                build_layout_indexed_text(obj, text, el_text)
     except AttributeError:
         pass
 
